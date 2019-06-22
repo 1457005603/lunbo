@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/animation.js"></script>
+    <script src="js/focus.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul,
+        ol {
+            list-style: none;
+        }
+        
+        .focus {
+            overflow: hidden;
+            position: relative;
+            left: 0;
+            width: 640px;
+            height: 360px;
+            margin: 100px auto;
+            /* border: 1px solid #ccc; */
+        }
+        
+        .focus ul {
+            position: absolute;
+            left: 0;
+            width: 5000px;
+        }
+        
+        .focus ul li {
+            float: left;
+        }
+        
+        .btn .btn-lf {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 60px;
+            font-size: 24px;
+            line-height: 60px;
+            text-align: center;
+            background: rgba(0, 0, 0, .5);
+            cursor: pointer;
+        }
+        
+        .btn {
+            display: none;
+        }
+        
+        .btn .btn-rg {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 30px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 24px;
+            background: rgba(0, 0, 0, .5);
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        
+        .btn-lf:hover,
+        .btn-rg:hover {
+            background: rgba(0, 0, 0, .2);
+        }
+        
+        .focus ol {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 30px;
+        }
+        
+        .focus ol li {
+            float: left;
+            width: 15px;
+            height: 15px;
+            margin-left: 10px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .current {
+            background: #f60;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="focus">
+        <ul>
+            <li>
+                <a href="javacsript:void(0);"><img src="img/1.png" alt=""></a>
+            </li>
+            <li>
+                <a href="javacsript:void(0);"><img src="img/2.png" alt=""></a>
+            </li>
+            <li>
+                <a href="javacsript:void(0);"><img src="img/3.png" alt=""></a>
+            </li>
+            <li>
+                <a href="javacsript:void(0);"><img src="img/4.png" alt=""></a>
+            </li>
+            <li>
+                <a href="javacsript:void(0);"><img src="img/5.png" alt=""></a>
+            </li>
+            <!-- <li>
+                <a href="javacsript:void(0);"><img src="img/pic-06.jpg" alt=""></a>
+            </li> -->
+        </ul>
+        <div class="btn">
+            <div class="btn-lf">&lt;</div>
+            <div class="btn-rg">&gt;</div>
+        </div>
+        <ol>
+            <!-- 由图片的li决定小圆点的个数 动态生成 -->
+            <!-- <li class="current"></li> -->
+        </ol>
+    </div>
+</body>
+
+</html>
